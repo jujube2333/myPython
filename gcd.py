@@ -17,3 +17,8 @@ def extEuclid(a, b):
         y = x0 - q * y0
     return x, y
 
+# a = x mod m, b = x mod n
+def tnReminder(m, n, a, b):
+    v, w = extEuclid(m, n)
+    x = m * v * b + n * w * a
+    return x % (m * n)
